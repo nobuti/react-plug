@@ -1,1 +1,3 @@
-export const HFTW = 'Hooks for the win'
+import useWindowSize from './hooks/useWindowSize'
+
+export { useWindowSize }
