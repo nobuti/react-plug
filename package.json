@@ -1,5 +1,5 @@
 {
-  "name": "@nobuti/react-plug",
+  "name": "react-plug",
   "version": "0.0.1",
   "description": "Custom plugable hooks library",
   "main": "dist/index.js",
