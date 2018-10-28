@@ -47,8 +47,17 @@ ReactDOM.render(<App />, rootElement);
 ### useWindowSize
 
 ```jsx
-const size = useWindowSize();
+const size = useWindowSize({delay: 50});
 ```
 
 Options:
-- delay: number of miliseconds to debounce
+- delay: number of miliseconds to debounce. Default to 100 miliseconds.
+
+### useKeypress
+
+```jsx
+const key = useKeypress({keys: [13, 27]});
+```
+
+Options:
+- keys: array of key codes you want to catch.
