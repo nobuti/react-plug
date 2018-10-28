@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import debounce from 'lodash.debounce'
 
-export default () => {
+export default ({ delay = 100 }) => {
   const [size, setState] = useState(null)
   const onChange = debounce(
     useCallback(e => {
@@ -11,7 +11,7 @@ export default () => {
       }
       setState(size)
     }),
-    100
+    delay
   )
 
   useEffect(() => {

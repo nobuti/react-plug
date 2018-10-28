@@ -49,3 +49,6 @@ ReactDOM.render(<App />, rootElement);
 ```jsx
 const size = useWindowSize();
 ```
+
+Options:
+- delay: number of miliseconds to debounce
