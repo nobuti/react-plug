@@ -7,7 +7,7 @@
   "jsnext:main": "dist/index.es.js",
   "engines": {
     "node": ">=8",
-    "npm": ">=5"  
+    "npm": ">=5"
   },
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/nobuti/react-plug#readme",
   "peerDependencies": {
+    "lodash.debounce": "^4.0.8",
     "prop-types": "^15.5.4",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0"
@@ -47,9 +48,11 @@
     "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
+    "prettier": "^1.14.3",
     "react-scripts": "^1.1.4",
     "rollup": "^0.64.1",
     "rollup-plugin-babel": "^3.0.7",
