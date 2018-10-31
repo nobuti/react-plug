@@ -61,3 +61,9 @@ const key = useKeypress({keys: [13, 27]});
 
 Options:
 - keys: array of key codes you want to catch.
+
+### useOnline
+
+```jsx
+const online = useOnline();
+```
