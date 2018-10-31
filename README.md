@@ -67,3 +67,9 @@ Options:
 ```jsx
 const online = useOnline();
 ```
+
+### usePageHidden
+
+```jsx
+const pageHidden = usePageHidden();
+```
