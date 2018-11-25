@@ -44,6 +44,19 @@ ReactDOM.render(<App />, rootElement);
 
 [View example in CodeSandbox](https://codesandbox.io/s/vq97rq9kv0)
 
+### useMount
+
+```jsx
+useMount(() => console.log(`I'm mounted`));
+```
+
+### useUnMount
+
+```jsx
+useUnMount(() => console.log(`I'm going to unmount`));
+```
+
+
 ### useWindowSize
 
 ```jsx
@@ -72,4 +85,10 @@ const online = useOnline();
 
 ```jsx
 const pageHidden = usePageHidden();
+```
+
+### useScrollPosition
+
+```jsx
+const {x, y} = useScrollPosition();
 ```
