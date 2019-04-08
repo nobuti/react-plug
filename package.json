@@ -15,7 +15,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prerelease": "npm run build",
-    "release": "np"
+    "release": "np --yarn=false"
   },
   "repository": {
     "type": "git",
@@ -76,9 +76,5 @@
     "setupFiles": [
       "<rootDir>/setupFile.js"
     ]
-  },
-  "np": {
-    "yarn": false,
-    "contents": "dist"
   }
 }
