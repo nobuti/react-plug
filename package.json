@@ -78,7 +78,7 @@
     ]
   },
   "np": {
-		"yarn": false,
-		"contents": "dist"
-	}
+    "yarn": false,
+    "contents": "dist"
+  }
 }
