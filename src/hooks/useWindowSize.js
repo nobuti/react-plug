@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import debounce from 'lodash.debounce'
 
 export default ({ delay = 100 } = {}) => {
@@ -7,24 +7,25 @@ export default ({ delay = 100 } = {}) => {
     height: window.outerHeight
   })
 
-  const onChange = debounce(
-    useCallback(e => {
-      const size = {
-        width: window.outerWidth,
-        height: window.outerHeight
-      }
-      setState(size)
-    }),
-    delay
-  )
-
-  useEffect(() => {
-    window.addEventListener('resize', onChange)
-
-    return () => {
-      window.removeEventListener('resize', onChange)
+  const onChange = debounce(e => {
+    const size = {
+      width: e.target.outerWidth,
+      height: e.target.outerHeight
     }
-  })
+
+    setState(size)
+  }, delay)
+
+  useEffect(
+    () => {
+      window.addEventListener('resize', onChange)
+
+      return () => {
+        window.removeEventListener('resize', onChange)
+      }
+    },
+    [delay]
+  )
 
   return size
 }

@@ -48,7 +48,7 @@ export default () => {
     return () => {
       window.removeEventListener('scroll', onScroll)
     }
-  })
+  }, [])
 
   return scroll
 }

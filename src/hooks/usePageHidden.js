@@ -46,7 +46,7 @@ export default () => {
     return () => {
       document.removeEventListener(event, onChange, false)
     }
-  })
+  }, [])
 
   return isHidden
 }
