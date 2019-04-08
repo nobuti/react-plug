@@ -77,5 +77,8 @@
       "<rootDir>/setupFile.js"
     ]
   },
-  "dependencies": {}
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+	}
 }
