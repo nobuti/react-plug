@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-yarn add react-plug
+yarn add @nobuti/react-plug
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ yarn add react-plug
 import React from "react";
 import ReactDOM from "react-dom";
 
-import {useWindowSize} from "react-plug";
+import {useWindowSize} from "@nobuti/react-plug";
 
 import "./styles.css";
 
