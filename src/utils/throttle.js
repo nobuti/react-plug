@@ -9,3 +9,5 @@ function throttle(func, delay) {
     }
   }
 }
+
+export default throttle
