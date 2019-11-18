@@ -1,9 +1,9 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-const { act } = TestRenderer
-import debounce from 'lodash.debounce'
 
 import useWindowSize from '../useWindowSize'
+
+const { act } = TestRenderer
 
 const Hookable = () => {
   const size = useWindowSize()
@@ -11,8 +11,7 @@ const Hookable = () => {
 }
 
 // Tell jest to mock this import
-jest.mock('lodash.debounce')
-debounce.mockImplementation(fn => fn)
+jest.mock('../../utils/throttle', () => fn => fn)
 
 describe('useWindowSize', () => {
   let component
@@ -24,10 +23,16 @@ describe('useWindowSize', () => {
 
     const div = component.root.findByType('div')
 
-    window.resizeTo(600, 300)
+    act(() => {
+      window.resizeTo(600, 300)
+    })
+
     expect(div.props.children).toEqual(600)
 
-    window.resizeTo(800, 500)
+    act(() => {
+      window.resizeTo(800, 500)
+    })
+
     expect(div.props.children).toEqual(800)
   })
 })

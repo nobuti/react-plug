@@ -20,10 +20,14 @@ describe('useKeypress', () => {
     const div = component.root.findByType('div')
     expect(div.props.children).toEqual('nothing pressed')
 
-    window.keyPress(27)
+    act(() => {
+      window.keyPress(27)
+    })
     expect(div.props.children).toEqual('nothing pressed')
 
-    window.keyPress(13)
+    act(() => {
+      window.keyPress(13)
+    })
     expect(div.props.children).toEqual(13)
   })
 
@@ -33,15 +37,17 @@ describe('useKeypress', () => {
     })
 
     const div = component.root.findByType('div')
-
-    window.keyPress(27)
+    act(() => {
+      window.keyPress(27)
+    })
     expect(div.props.children).toEqual('nothing pressed')
 
     act(() => {
       component.update(<Hookable keys={[13, 27]} />)
     })
-
-    window.keyPress(27)
+    act(() => {
+      window.keyPress(27)
+    })
     expect(div.props.children).toEqual(27)
   })
 })

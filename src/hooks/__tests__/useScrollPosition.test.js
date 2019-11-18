@@ -19,11 +19,13 @@ describe('useScrollPosition', () => {
 
     const div = component.root.findByType('div')
     expect(div.props.children).toEqual(0)
-
-    window.scrollTo(0, 300)
+    act(() => {
+      window.scrollTo(0, 300)
+    })
     expect(div.props.children).toEqual(300)
-
-    window.scrollTo(0, 0)
+    act(() => {
+      window.scrollTo(0, 0)
+    })
     expect(div.props.children).toEqual(0)
   })
 })

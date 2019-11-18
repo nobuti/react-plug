@@ -19,11 +19,13 @@ describe('usePageHidden', () => {
 
     const div = component.root.findByType('div')
     expect(div.props.children).toEqual('visible')
-
-    window.hide()
+    act(() => {
+      window.hide()
+    })
     expect(div.props.children).toEqual('hidden')
-
-    window.show()
+    act(() => {
+      window.show()
+    })
     expect(div.props.children).toEqual('visible')
   })
 })
