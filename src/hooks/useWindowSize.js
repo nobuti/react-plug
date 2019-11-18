@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import debounce from 'lodash.debounce'
+import throttle from '../utils/throttle'
 
 export default ({ delay = 100 } = {}) => {
   const [size, setState] = useState({
@@ -7,7 +7,7 @@ export default ({ delay = 100 } = {}) => {
     height: window.outerHeight
   })
 
-  const onChange = debounce(e => {
+  const onChange = throttle(e => {
     const size = {
       width: e.target.outerWidth,
       height: e.target.outerHeight
