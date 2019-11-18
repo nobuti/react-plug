@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/nobuti/react-plug#readme",
   "peerDependencies": {
-    "lodash.debounce": "^4.0.8",
     "prop-types": "^15.5.4",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
@@ -54,7 +53,6 @@
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
     "jest": "^24.7.1",
-    "lodash.debounce": "^4.0.8",
     "np": "^4.0.2",
     "prettier": "^1.14.3",
     "react": "^16.8.0",
@@ -76,5 +74,8 @@
     "setupFiles": [
       "<rootDir>/setupFile.js"
     ]
+  },
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
